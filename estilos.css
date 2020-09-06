@@ -2,4 +2,13 @@ body {
   font-family: "Times New Roman", Times, serif;
   font-style: normal;
   font-weight: bold;
+  color: white;
+  background-image: url("imgs/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+.contenedor-con-menu {
+  padding: 5rem 1.5rem;
+  color: rgb(0, 0, 205);
 }
