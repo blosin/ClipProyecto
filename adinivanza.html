@@ -16,55 +16,92 @@
       crossorigin="anonymous"
     />
     <link href="estilos.css" type="text/css" rel="stylesheet" />
+    <link rel="icon" href="imgs/home.png" type="image/x-icon" />
     <title>Adivinanza!</title>
   </head>
   <body>
-    <header>
-      <div class="text-center">
-        <p>Mi pagina</p>
-      </div>
-    </header>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <a class="navbar-brand" href="index.html"
-        ><img
-          width="25"
-          height="25"
-          loading="lazy"
-          src="imgs/home.png"
-          alt="HOME"
-        />
-        Inicio | Salir</a
-      >
-    </nav>
-    <div class="container">
-      <h1>Intenta resolverlo</h1>
-      <h2>Adivinanza:</h2>
-      <p>
-        esto va a ser la adivinanza en el futuro cualquier cosa poner total es
-        lo mismo!
-      </p>
-      <div class="form-group">
-        <label for="nombre"></label>
-        <input
-          type="text"
-          name="nombre"
-          id="nombre"
-          class="form-control"
-          placeholder="Nombre"
-          aria-describedby="helpId"
-        />
-        <small id="helpId" class="text-danger col-12"
-          >Ingrese nombre para jugar</small
+    <div class="container-fluid">
+      <header>
+        <div class="text-center">
+          <p>Web actualidad</p>
+        </div>
+      </header>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html"
+          ><img
+            width="25"
+            height="25"
+            loading="lazy"
+            src="imgs/home.png"
+            alt="HOME"
+          />
+          Inicio | Salir</a
         >
-      </div>
+      </nav>
+      <div class="container">
+        <h1>Intenta resolverlo</h1>
+        <h2>Pista 1: <b>Es una ciencia social.</b></h2>
 
-      <input
-        name=""
-        id=""
-        class="btn btn-primary col-3"
-        type="button"
-        value="Jugar"
-      />
+        <div class="form-group">
+          <label for="nombre"></label>
+          <input
+            type="text"
+            name="nombre"
+            id="nombre"
+            class="form-control"
+            placeholder="Nombre"
+            aria-describedby="helpId"
+          />
+          <small id="helpId" class="text-danger col-12"
+            >Ingrese nombre para jugar</small
+          >
+        </div>
+        <div
+          class="alert alert-danger"
+          id="alerta"
+          style="visibility: hidden; display: none"
+          role="alert"
+        >
+          Ingrese nombre primero
+        </div>
+        <div
+          class="alert alert-success"
+          id="alerta2"
+          style="visibility: hidden; display: none"
+          role="alert"
+        >
+          Gracias por jugar
+        </div>
+        <div
+          class="alert alert-success h-25"
+          id="alertaGanar"
+          style="visibility: hidden; display: none"
+          role="alert"
+        >
+          Ganaste!!!!!!!
+        </div>
+        <div
+          class="alert alert-danger h-25"
+          id="alertaPerder"
+          style="visibility: hidden; display: none"
+          role="alert"
+        >
+          Perdiste!!!!!!!
+        </div>
+
+        <input
+          name="btnJugar"
+          id="btnJugar"
+          class="btn btn-primary col-3"
+          type="button"
+          value="Jugar"
+        />
+        <footer>
+          <div class="container">
+            <p class="modal-footer text-success">Joel Ezequiel Ocampo 2020</p>
+          </div>
+        </footer>
+      </div>
     </div>
 
     <!-- Optional JavaScript -->
@@ -84,5 +121,6 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
+    <script src="javascript.js"></script>
   </body>
 </html>

@@ -16,84 +16,138 @@
       crossorigin="anonymous"
     />
     <link href="estilos.css" type="text/css" rel="stylesheet" />
-    <title>Adivinanza!</title>
+    <link rel="icon" href="imgs/home.png" type="image/x-icon" />
+    <title>Registrarse!</title>
   </head>
   <body>
-    <header>
-      <div class="text-center">
-        <p>Mi pagina</p>
+    <div class="container-fluid bg-dark">
+      <header>
+        <div class="text-center">
+          <p>Web actualidad</p>
+        </div>
+      </header>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html"
+          ><img
+            width="25"
+            height="25"
+            loading="lazy"
+            src="imgs/home.png"
+            alt="HOME"
+          />
+          Inicio | Salir</a
+        >
+      </nav>
+      <div class="container">
+        <form class="needs-validation" novalidate>
+          <div class="form-row">
+            <label for="validationCustom01">Nombre:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom01"
+              value=""
+              required
+            />
+            <div class="valid-feedback">Aceptado!</div>
+            <div class="invalid-feedback">No aceptado!</div>
+
+            <label for="validationCustom02">E-mail</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom02"
+              value=""
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"
+              required
+            />
+            <div class="invalid-feedback">Formato incorrecto</div>
+
+            <label for="validationCustom03">Contraseña</label>
+            <input
+              type="password"
+              class="form-control"
+              id="validationCustom03"
+              required
+            />
+            <div class="invalid-feedback">Ingrese contraseña</div>
+
+            <label for="validationCustom05">Repetir Contraseña</label>
+            <input
+              type="password"
+              class="form-control"
+              id="validationCustom05"
+              required
+            />
+            <div class="invalid-feedback">Contraseña incorrecta</div>
+            <div
+              class="text-danger"
+              style="visibility: hidden"
+              id="miVal"
+              name="miVal"
+            >
+              Las contraseñas deben coincidir
+            </div>
+          </div>
+          <input
+            type="submit"
+            value="Aceptar"
+            class="btn btn-primary"
+            id="btnAceptar"
+            onclick="registrar();"
+          />
+          <!--<button id="btnAceptarr" class="btn btn-primary" type="submit">
+            Aceptar
+          </button>-->
+          <a
+            name="bntCancelar"
+            id="btnCancelar"
+            class="btn btn-primary"
+            href="index.html"
+            role="button"
+            value="Cancelar"
+            >Cancelar</a
+          >
+        </form>
+
+        <footer>
+          <div class="container">
+            <p class="modal-footer text-success">Joel Ezequiel Ocampo 2020</p>
+          </div>
+        </footer>
       </div>
-    </header>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <a class="navbar-brand" href="index.html"
-        ><img
-          width="25"
-          height="25"
-          loading="lazy"
-          src="imgs/home.png"
-          alt="HOME"
-        />
-        Inicio | Salir</a
-      >
-    </nav>
-    <div class="container">
-      <div class="form-group">
-        <label for="usuario"></label>
-        <input
-          type="text"
-          class="form-control"
-          name=""
-          id=""
-          aria-describedby="helpId"
-          placeholder="Usuario"
-        />
-        <small id="helpId" class="form-text text-muted">Obligatorio</small>
-      </div>
-      <div class="form-group">
-        <label for=""></label>
-        <input
-          type="text"
-          class="form-control"
-          name=""
-          id=""
-          aria-describedby="helpId"
-          placeholder="E-mail"
-        />
-        <small id="helpId" class="form-text text-muted">Obligatorio</small>
-      </div>
-      <div class="form-group">
-        <label for=""></label>
-        <input
-          type="password"
-          class="form-control"
-          name=""
-          id=""
-          placeholder="Contraseña"
-        />
-        <small id="helpId" class="form-text text-muted">Obligatorio</small>
-      </div>
-      <div class="form-group">
-        <label for=""></label>
-        <input
-          type="password"
-          class="form-control"
-          name=""
-          id=""
-          placeholder="Repetir contraseña"
-        />
-        <small id="helpId" class="form-text text-muted">Obligatorio</small>
-      </div>
-      <button class="btn btn-primary">Aceptar</button>
-      <a
-        name=""
-        id=""
-        class="btn btn-primary"
-        href="index.html"
-        role="button"
-        value="Cancelar"
-        >Cancelar</a
-      >
     </div>
+
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        "use strict";
+        window.addEventListener(
+          "load",
+          function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName("needs-validation");
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (
+              form
+            ) {
+              form.addEventListener(
+                "submit",
+                function (event) {
+                  if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                  form.classList.add("was-validated");
+                },
+                false
+              );
+            });
+          },
+          false
+        );
+      })();
+    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -111,5 +165,6 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
+    <script src="javascript.js"></script>
   </body>
 </html>

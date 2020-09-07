@@ -1,5 +1,29 @@
 .contenedor-con-menu {
   padding: 5rem 1.5rem;
-  color: rgb(0, 0, 205);
-  background: url("imgs/background.jpg");
 }
+
+body,
+html {
+  height: 100%;
+  font-family: Calibri, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  background-color: rgb(41, 43, 44);
+  color: greenyellow;
+}
+
+.color {
+  color: greenyellow;
+}
+/*.bg {
+  //The image used 
+  background-image: url("imgs/background.jpg");
+
+  //Full height 
+  height: 100%;
+
+  //Center and scale the image nicely 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}*/
