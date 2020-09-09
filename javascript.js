@@ -1,4 +1,3 @@
-document.getElementById("btnJugar").onclick = cargar;
 //document.getElementById("btnAceptar").onclick = registrar;
 //document.getElementById("btnJugar").addEventListener("click", registrar);
 function cargar() {
@@ -57,6 +56,42 @@ function registrar() {
   } else document.getElementById("miVal").style = "visibility:visible;";
 }
 
+var paginaActual = 0;
+var ultimaPagina = 0;
+var countries = [];
+
+function cargarMiJson() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      countries = JSON.parse(this.responseText);
+      ultimaPagina = countries.length / 10;
+      cargarGrilla();
+    }
+  };
+  xhttp.open("GET", "https://restcountries.eu/rest/v2/all", true);
+  xhttp.send();
+}
+
+cargarMiJson();
+document.getElementById("btnAnterior").addEventListener("click", Anterior);
+
+function Siguiente() {
+  if (paginaActual < ultimaPagina - 1) paginaActual++;
+  cargarGrilla();
+}
+function Anterior() {
+  if (paginaActual > 0) paginaActual--;
+  cargarGrilla();
+}
+
+function cargarGrilla() {
+  var filas = "";
+  countries.slice(paginaActual * 10, paginaActual * 10 + 10).forEach((pais) => {
+    filas += `<tr><td>${pais.name}</td><td>${pais.population}</td><td><img src="${pais.flag}" height="50" width="50"></td></tr>`;
+  });
+  document.getElementById("cuerpoTablaPais").innerHTML = filas;
+}
 /*var nombrePersona = document.getElementById("txtNombre").value;
   var edadPersona = document.getElementById("txtEdad").value;
   if (isNaN(edadPersona)) {
