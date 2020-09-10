@@ -40,74 +40,82 @@
       </nav>
       <div class="container">
         <form class="needs-validation pb-5" novalidate>
-          <div class="form-row">
-            <label for="validationCustom01">Nombre:</label>
-            <input
-              type="text"
-              class="form-control"
-              id="validationCustom01"
-              value=""
-              required
-            />
-            <div class="valid-feedback">Aceptado!</div>
-            <div class="invalid-feedback">No aceptado!</div>
-
-            <label for="validationCustom02">E-mail</label>
-            <input
-              type="text"
-              class="form-control"
-              id="validationCustom02"
-              value=""
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"
-              required
-            />
-            <div class="invalid-feedback">Formato incorrecto</div>
-
-            <label for="validationCustom03">Contraseña</label>
-            <input
-              type="password"
-              class="form-control"
-              id="validationCustom03"
-              required
-            />
-            <div class="invalid-feedback">Ingrese contraseña</div>
-
-            <label for="validationCustom05">Repetir Contraseña</label>
-            <input
-              type="password"
-              class="form-control"
-              id="validationCustom05"
-              required
-            />
-            <div class="invalid-feedback">Contraseña incorrecta</div>
-            <div
-              class="text-danger"
-              style="visibility: hidden"
-              id="miVal"
-              name="miVal"
-            >
-              Las contraseñas deben coincidir
-            </div>
-          </div>
+          <label for="validationCustom01">Nombre:</label>
           <input
-            type="submit"
-            value="Aceptar"
-            class="btn btn-primary"
-            id="btnAceptar"
-            onclick="registrar();"
+            type="text"
+            class="form-control"
+            id="validationCustom01"
+            value=""
+            required
           />
-          <!--<button id="btnAceptarr" class="btn btn-primary" type="submit">
+          <div class="valid-feedback">Aceptado!</div>
+          <div class="invalid-feedback">No aceptado!</div>
+
+          <label for="validationCustom02">E-mail:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="validationCustom02"
+            value=""
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"
+            required
+          />
+          <div class="invalid-feedback">Formato incorrecto</div>
+
+          <label for="validationCustom03">Contraseña:</label>
+          <input
+            type="password"
+            class="form-control"
+            id="validationCustom03"
+            required
+          />
+          <div class="invalid-feedback">Ingrese contraseña</div>
+
+          <label for="validationCustom05">Repetir Contraseña:</label>
+          <input
+            type="password"
+            class="form-control"
+            id="validationCustom05"
+            required
+          />
+          <div class="invalid-feedback">Contraseña incorrecta</div>
+          <div
+            class="text-danger"
+            style="visibility: hidden"
+            id="miVal"
+            name="miVal"
+          >
+            Las contraseñas deben coincidir
+          </div>
+
+          <label for="txtArea">Comentario:</label>
+          <textarea
+            class="form-control"
+            name="txtArea"
+            id="txtArea"
+            rows="3"
+          ></textarea>
+          <div class="container-fluid pt-5">
+            <input
+              type="submit"
+              value="Aceptar"
+              class="btn btn-primary"
+              id="btnAceptar"
+              onclick="registrar();"
+            />
+            <!--<button id="btnAceptarr" class="btn btn-primary" type="submit">
             Aceptar
           </button>-->
-          <a
-            name="bntCancelar"
-            id="btnCancelar"
-            class="btn btn-primary"
-            href="index.html"
-            role="button"
-            value="Cancelar"
-            >Cancelar</a
-          >
+            <a
+              name="bntCancelar"
+              id="btnCancelar"
+              class="btn btn-primary"
+              href="index.html"
+              role="button"
+              value="Cancelar"
+              >Cancelar</a
+            >
+          </div>
         </form>
 
         <footer>
