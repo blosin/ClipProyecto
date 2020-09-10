@@ -74,7 +74,6 @@ function cargarMiJson() {
 }
 
 cargarMiJson();
-document.getElementById("btnAnterior").addEventListener("click", Anterior);
 
 function Siguiente() {
   if (paginaActual < ultimaPagina - 1) paginaActual++;
@@ -90,7 +89,8 @@ function cargarGrilla() {
   countries.slice(paginaActual * 10, paginaActual * 10 + 10).forEach((pais) => {
     filas += `<tr><td>${pais.name}</td><td>${pais.population}</td><td><img src="${pais.flag}" height="50" width="50"></td></tr>`;
   });
-  document.getElementById("cuerpoTablaPais").innerHTML = filas;
+  if (document.getElementById("cuerpoTablaPais") != null)
+    document.getElementById("cuerpoTablaPais").innerHTML = filas;
 }
 /*var nombrePersona = document.getElementById("txtNombre").value;
   var edadPersona = document.getElementById("txtEdad").value;
